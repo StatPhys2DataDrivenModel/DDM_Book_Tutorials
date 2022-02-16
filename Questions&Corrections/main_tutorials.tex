@@ -1,0 +1,211 @@
+
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{fullpage}
+\usepackage{amsmath,amssymb,color,bm,url}
+  \usepackage{bbm}
+  \usepackage{graphicx}
+  \usepackage{tcolorbox}
+
+\usepackage{multind}%\ProvidesPackage{multind}
+ % \makeindex{s}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%  DEFINIZIONI DI FONT    %%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\font\msytw=msbm9 scaled\magstep1
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%         SIMBOLI VARI           %%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\let\a=\alpha \let\b=\beta  \let\g=\gamma  \let\d=\delta \let\e=\varepsilon
+\let\z=\zeta  \let\h=\eta   \let\th=\theta \let\k=\kappa \let\l=\lambda
+\let\m=\mu    \let\n=\nu    \let\x=\xi     \let\p=\pi    \let\r=\rho
+\let\s=\sigma \let\t=\tau   \let\f=\varphi \let\ph=\varphi %\let\c=\chi
+\let\ps=\psi  \let\y=\upsilon \let\o=\omega\let\si=\varsigma
+\let\G=\Gamma \let\D=\Delta  \let\Th=\Theta\let\L=\Lambda \let\X=\Xi
+\let\P=\Pi    \let\Si=\Sigma \let\F=\Phi    \let\Ps=\Psi
+\let\O=\Omega \let\Y=\Upsilon
+\let\ee=\epsilon
+
+\let\==\equiv
+\let\io=\infty 
+\def\ie{{\em i.e. }}
+\def\eg{{\em e.g. }}
+\let\dpr=\partial
+\newcommand{\Iint}{\int_{-\infty}^\infty}
+\newcommand{\websiteURL}{\url{https://github.com/StatPhys2DataDrivenModel/DDM_Book_Tutorials}}
+
+\def\PP{\mathcal{P}}
+\def\EE{\mathcal{E}}
+\def\MM{\mathcal{M}} 
+\def\VV{\mathcal{V}}
+\def\CC{\mathcal{C}}
+\def\FF{\mathcal{F}} 
+\def\HH{\mathcal{H}}
+\def\WW{\mathcal{W}}
+\def\TT{\mathcal{T}}
+\def\NN{\mathcal{N}} 
+\def\BB{\mathcal{B}}
+\def\II{\mathcal{I}}
+\def\RR{\mathcal{R}}
+\def\LL{\mathcal{L}} 
+\def\JJ{\mathcal{J}}
+ \def\OO{\mathcal{O}}
+\def\DD{\mathcal{D}}
+\def\AA{\mathcal{A}}
+\def\GG{\mathcal{G}} 
+\def\SS{\mathcal{S}}
+\def\KK{\mathcal{K}}
+\def\UU{\mathcal{U}} 
+\def\QQ{\mathcal{Q}} 
+\def\XX{\mathcal{X}}
+\def\YY{\mathcal{Y}}
+\def\ZZ{\mathcal{Z}}
+
+\def\bth{{\bm \theta}}
+\def\bsi{{\bm \sigma}}
+\def\bxi{{\bm \xi}}
+\def\bx{{\bm x}}
+\def\by{{\bm y}}
+\def\br{{\bm r}}
+\def\bs{{\bm s}}
+\def\bt{{\bm t}}
+\def\bb{{\bm b}}
+\def\bh{{\bm h}}
+\def\bu{{\bm u}}
+\def\bw{{\bm w}}
+\def\bW{{\bm W}}
+\def\bJ{{\bm J}}
+\def\bT{{\bm T}}
+\def\bzero{{\bm 0}}
+\def\bphi{{\bm \phi}}
+\def\btau{{\bm \tau}}
+\def\bee{{\bm \eta}}
+\def\icorr{T}
+\def\bv{{\bm v}}
+\def\be{{\bm e}}
+\def\bC{{\bm C}}
+\def\bX{{\bm X}}
+\def\bY{{\bm Y}}
+\def\bM{{\bm M}}
+\def\bP{{\bm P}}
+\def\bII{{\bm \II}}
+\def\bMM{{\bm \MM}}
+\def\bz{{\bm z}}
+\def\bA{{\bm A}}
+
+
+\def\re{{\rm Re}\,}
+\def\im{{\rm Im}\,}
+\def\tto{\Rightarrow}
+
+\def\ul{\underline}
+\def\erf{\text{erf}}
+\def\var{\text{Var}}
+\def\redv{\bar v}
+
+
+
+\def\ol#1{{\overline #1}}
+\def\Overline#1{{\bar#1}}
+\def\V#1{{\underline#1}}
+\def\Prob{{\rm Prob}}
+\def\qed{\raise1pt\hbox{\vrule height5pt width5pt depth0pt}}
+
+\def\to{\rightarrow}
+\def\la{\left\langle}
+\def\ra{\right\rangle}
+\def\wh{\widehat}
+\def\wt{\widetilde}
+\def\Tr{{\rm Tr}\,}
+\def\de{\mathrm d}
+\newcommand{\afunc}[1]{\operatorname{\mathsf{#1}}}
+\def\DE{\afunc{D}}
+\def\AE{\afunc{A}}
+\def\fj{\f_{\rm j}}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%    LETTERE GRECHE E LATINE IN NERETTO     %%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% lettere greche e latine in neretto italico - pag.430 del manuale
+%\mathchardef\aa   = "050B
+%\mathchardef\bb   = "050C
+%\mathchardef\ggg  = "050D
+%\mathchardef\xxx  = "0518
+%%\mathchardef\hhh = "0511
+%\mathchardef\zzzzz= "0510
+%\mathchardef\oo   = "0521
+%\mathchardef\lll  = "0515
+%\mathchardef\mm   = "0516
+%\mathchardef\Dp   = "0540
+%\mathchardef\H    = "0548
+%\mathchardef\FFF  = "0546
+%\mathchardef\ppp  = "0570
+%\mathchardef\nn   = "0517
+%\mathchardef\ff   = "0527
+%\mathchardef\pps  = "0520
+%%\mathchardef\XXX = "0504
+%\mathchardef\FFF  = "0508
+%\mathchardef\nnnnn= "056E
+
+\def\ind{\mathbbm{1}}
+\def\RRR{\hbox{\msytw R}}
+\def\CCC{\hbox{\msytw C}}
+\def\NNN{\hbox{\msytw N}} 
+\def\ZZZ{\hbox{\msytw Z}}
+\def\TTT{\hbox{\msytw T}} 
+\def\QQQ{\hbox{\msytw Q}} 
+
+\def\ul#1{{\underline#1}}
+\def\lhs{{\it l.h.s.}\ }
+\def\rhs{{\it r.h.s.}\ }
+
+\newcommand{\beq}{\begin{equation}}
+\newcommand{\eeq}{\end{equation}}
+\newcommand{\bea}{\begin{eqnarray}}
+\newcommand{\eea}{\end{eqnarray}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\tableofcontents
+
+%\include{intro}
+
+%\maintext
+%\setcounter{chapter}{7}
+%\include{cap1}
+%\include{cap1_tut}
+%\include{cap2}
+%\include{cap2_tut}
+%\include{cap3}
+%\include{cap3_tut}
+%\include{cap4}
+\include{cap4_tut}
+%\include{cap5}
+%\include{cap5_tut}
+%\include{cap6}
+%\include{cap6_tut}
+%\include{cap7}
+%\include{cap7_tut}
+%\include{cap8}
+%\include{cap8_tut}
+
+  %\printindex{s}{Index}
+
+
+%\bibliographystyle{OUPnum} 
+%\bibliography{biblio} 
+
+
+  
+\end{document}
+

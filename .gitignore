@@ -1,17 +1,26 @@
 # Jupyter Notebook checkpoint folder
 .ipynb_checkpoints
 
-# Data folder - data must be downloaded from Zenodo
-# data
+
 
 # DS_Store
 ./.DS_Store
 ./Tutorial1/.DS_Store
-Tutorial1/Corrections/.DS_Store
+./Tutorial2/.DS_Store
+./Tutorial3/.DS_Store
+./Tutorial4/.DS_Store
+./Tutorial5/.DS_Store
+./Tutorial6/.DS_Store
+./Tutorial7/.DS_Store
+./Tutorial8/.DS_Store
 
 
-# solutions
-Tutorial1/Corrections/Figs
-Tutorial1/Corrections/corrections.pdf
-Tutorial1/Corrections/corrections.tex
-
+# Questions and  Corrections tex and pdf files with Figures
+Tutorial1/Questions&Corrections
+Tutorial2/Questions&Corrections
+Tutorial3/Questions&Corrections
+Tutorial4/Questions&Corrections
+Tutorial5/Questions&Corrections
+Tutorial6/Questions&Corrections
+Tutorial7/Questions&Corrections
+Tutorial8/Questions&Corrections
